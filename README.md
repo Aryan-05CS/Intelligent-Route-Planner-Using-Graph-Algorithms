@@ -265,25 +265,25 @@ Mumbai → Pune → Aurangabad → Nagpur
 Add Screenshot Here
 
 ```markdown
-![Home Page](images/homepage.png)
+![Home Page](c:\Users\ARYAN\OneDrive\Desktop\DSA\Screenshots P3\Home Page.png)
 ```
 
 ### Dashboard
 
 ```markdown
-![Dashboard](images/dashboard.png)
+![Dashboard](c:\Users\ARYAN\OneDrive\Desktop\DSA\Screenshots P3\2. Route Analytics Dashboard.png)
 ```
 
 ### Graph Visualization
 
 ```markdown
-![Graph](images/graph_visualization.png)
+![Graph](c:\Users\ARYAN\OneDrive\Desktop\DSA\Screenshots P3\5. Graph Visualization.png)
 ```
 
 ### Route Report
 
 ```markdown
-![Report](images/route_report.png)
+![Report](c:\Users\ARYAN\OneDrive\Desktop\DSA\Screenshots P3\6. Downloaded Route Report.png)
 ```
 
 ---
