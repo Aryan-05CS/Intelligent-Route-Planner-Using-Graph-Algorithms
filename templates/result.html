@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Route Analytics</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+
+        <span class="navbar-brand">
+
+            🚗 Intelligent Route Planner
+
+        </span>
+
+    </div>
+</nav>
+
+<div class="container mt-5">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-5">
+
+        <h1>Route Analytics Dashboard</h1>
+
+        <p class="text-muted">
+            Optimized route generated using Dijkstra's Algorithm
+        </p>
+
+    </div>
+
+    <!-- Analytics Cards -->
+
+    <div class="row mb-4">
+
+        <div class="col-md-4">
+
+            <div class="card stats-card">
+
+                <h5>Total Distance</h5>
+
+                <h2>{{ distance }} km</h2>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card stats-card">
+
+                <h5>Locations Covered</h5>
+
+                <h2>{{ node_count }}</h2>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card stats-card">
+
+                <h5>Algorithm</h5>
+
+                <h2>Dijkstra</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Shortest Route -->
+
+    <div class="route-box">
+
+        <h3>📍 Shortest Route</h3>
+
+        <hr>
+
+        <h5>
+
+            {% for node in path %}
+
+                {{ node }}
+
+                {% if not loop.last %}
+                    →
+                {% endif %}
+
+            {% endfor %}
+
+        </h5>
+
+    </div>
+
+    <!-- BFS -->
+
+    <div class="route-box">
+
+        <h3>🔵 BFS Traversal</h3>
+
+        <hr>
+
+        <p>
+
+            {{ bfs_result | join(' → ') }}
+
+        </p>
+
+    </div>
+
+    <!-- DFS -->
+
+    <div class="route-box">
+
+        <h3>🟢 DFS Traversal</h3>
+
+        <hr>
+
+        <p>
+
+            {{ dfs_result | join(' → ') }}
+
+        </p>
+
+    </div>
+
+    <!-- Graph Visualization -->
+
+    <div class="route-box">
+
+        <h3>📊 Graph Visualization</h3>
+
+        <hr>
+
+        <img src="{{ url_for('static',
+                             filename='images/route_graph.png') }}"
+             class="img-fluid rounded">
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="mt-4">
+
+        <a href="/download-report"
+           class="btn btn-success">
+
+           Download Report
+
+        </a>
+
+        <a href="/"
+           class="btn btn-primary">
+
+           Search Again
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+
+    <p>
+
+        Intelligent Route Planner |
+        Graph Algorithms |
+        Flask |
+        Dijkstra
+
+    </p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+INTELLIGENT ROUTE PLANNER REPORT
+==================================================
+
+Source: Amravati
+Destination: Nashik
+
+Shortest Route:
+Amravati -> Jalgaon -> Nashik
+
+Total Distance: 440 km
+
+BFS Traversal:
+Amravati -> Jalgaon -> Nagpur -> Nashik -> Aurangabad -> Mumbai -> Pune -> Satara -> Kolhapur
+
+DFS Traversal:
+Amravati -> Jalgaon -> Nashik -> Mumbai -> Pune -> Satara -> Kolhapur -> Aurangabad -> Nagpur
